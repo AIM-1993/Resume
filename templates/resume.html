@@ -10,13 +10,27 @@
   </head>
   <body>
     <div class="container">
+	 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" id="topnav">
+      <a class="navbar-brand" href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='static/images/logo_list.png') }}" width="33" height="33" class="d-inline-block align-top" alt="">个人简历</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link {% block home_H_L %}{% endblock %}" href="{{ url_for('items') }}">项目展示 <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% block about_H_L %}{% endblock %}" href="{{ url_for('download', filename="static/resume.pdf")}}">下载简历</a>
+			  </a>
+          </li>
+        </ul>
+		</nav>
       <hr>
       <div class="row">
+        <div class="col-6"> </div>
         <div class="col-6">
-          <h1>许正侒</h1>
-        </div>
-        <div class="col-6">
-          <p class="text-right"><a href="{{ url_for('download', filename="static/resume.pdf") }}">Download my Resume</a></p>
+          <p class="text-right"><a href="{{ url_for('download', filename="static/resume.pdf") }}">下载简历</a></p>
         </div>
       </div>
       <hr>
@@ -25,6 +39,7 @@
           <div class="media">
             <img class="mr-3" src="../static/images/115X115.gif" alt="Generic placeholder image">
             <div class="media-body">
+				<h2>许正侒</h2>
               <h5 class="mt-0">求职意向：PythonWeb开发相关工作</h5>
 			   <ul>
               	<li>2年通讯行业工作经验，大学主修电子信息工程。</li>
@@ -60,7 +75,11 @@
               <h5 class="text-right"><span aria-hidden="true"></span> Jan 2009 - Dec 2016</h5>
             </div>
           </div>
-          <h5><span class="badge badge-secondary">电子信息工程工学学士学位</span></h5>
+          <h5><span class="badge badge-secondary">电子信息工程专业工学学士学位</span></h5>
+			<ul>
+				<li>于大学1年级通过CET6级英语能力等级考试</li>
+				<li>于大学2年级通过全国大学生计算机等级考试（2级C语言）</li>
+			</ul>
         </div>
         <div class="col-md-6 col-sm-12">
           <h2>能力情况</h2>
@@ -101,7 +120,7 @@
               <h5 class="text-right"><span aria-hidden="true"></span> Aug 2016 - July 2018</h5>
             </div>
           </div>
-          <h5><span class="badge badge-secondary">Web Developer</span></h5>
+          <h5><span class="badge badge-secondary">工艺工程师</span></h5>
           <p>于2016年8月至2018年7月任职于长飞光纤光缆四川公司技术生产部，职务为工艺工程师，主要负责：</p>
           <ul>
             <li>负责对光缆生产护套工序工艺质量及工艺纪律的工艺及生产管理。</li>
