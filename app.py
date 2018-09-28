@@ -19,6 +19,9 @@ def download(filename):
     return send_from_directory(directory, filename, as_attachment=True)
 
 
+@app.route("/items/")
+def items():
+    return render_template("items.html")
 
 if __name__ == "__main__":
     from werkzaug.contrib.fixers import ProxyFix
