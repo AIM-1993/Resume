@@ -18,11 +18,18 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link {% block home_H_L %}{% endblock %}" href="#">项目展示 <span class="sr-only">(current)</span></a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              项目展示
+            </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#">豆瓣电影爬虫项目</a>
+                <a class="dropdown-item" href="#">采用Flask实现的代办事项清单网站</a>
+                <a class="dropdown-item" href="#">采用Django实现的购物网站项目</a>
+              </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link {% block about_H_L %}{% endblock %}" href="{{ url_for('download', filename="static/resume.pdf")}}">简历下载</a>
+            <a class="nav-link {% block about_H_L %}{% endblock %}" href="{{ url_for('download', filename="static/许正侒个人简历.pdf")}}">简历下载</a>
 			  </a>
           </li>
         </ul>
@@ -30,9 +37,7 @@
       <hr>
       <div class="row">
         <div class="col-6"> </div>
-        <div class="col-6">
-          <p class="text-right"><a href="{{ url_for('download', filename="static/许正侒个人简历.pdf") }}">下载简历</a></p>
-        </div>
+        <div class="col-6"> </div>
       </div>
       <hr>
       <div class="row">

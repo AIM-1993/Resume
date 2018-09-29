@@ -3,8 +3,6 @@ from flask import Flask, render_template, redirect, url_for, request, send_file,
 from flask_bootstrap import Bootstrap
 
 app = Flask(__name__)
-# app.config.from_pyfile('config.py')
-# db = SQLAlchemy(app)
 bootstrap = Bootstrap(app)
 
 
@@ -15,7 +13,7 @@ def home():
 
 @app.route("/<filename>", methods=["GET"])
 def download(filename):
-    directory = os.getcwd()  # 假设在当前目录
+    directory = os.getcwd()
     return send_from_directory(directory, filename, as_attachment=True)
 
 
