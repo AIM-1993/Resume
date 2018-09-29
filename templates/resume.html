@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{{ url_for('static', filename='../static/icons/icon.png') }}" rel="shortcut icon" />
     <title>个人简历</title>
     <!-- Bootstrap -->
     <link href="../static/css/bootstrap-4.0.0.css" rel="stylesheet">
@@ -11,7 +12,7 @@
   <body>
     <div class="container">
 	 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" id="topnav">
-      <a class="navbar-brand" href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='static/images/logo_list.png') }}" width="33" height="33" class="d-inline-block align-top" alt="">个人简历</a>
+      <a class="navbar-brand" href="{{ url_for('home') }}">个人简历</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -21,7 +22,7 @@
             <a class="nav-link {% block home_H_L %}{% endblock %}" href="#">项目展示 <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {% block about_H_L %}{% endblock %}" href="{{ url_for('download', filename="static/resume.pdf")}}">下载简历</a>
+            <a class="nav-link {% block about_H_L %}{% endblock %}" href="{{ url_for('download', filename="static/resume.pdf")}}">简历下载</a>
 			  </a>
           </li>
         </ul>
@@ -30,7 +31,7 @@
       <div class="row">
         <div class="col-6"> </div>
         <div class="col-6">
-          <p class="text-right"><a href="{{ url_for('download', filename="static/resume.pdf") }}">下载简历</a></p>
+          <p class="text-right"><a href="{{ url_for('download', filename="static/许正侒个人简历.pdf") }}">下载简历</a></p>
         </div>
       </div>
       <hr>
@@ -40,14 +41,14 @@
             <img class="mr-3" src="../static/images/115X115.gif" alt="Generic placeholder image">
             <div class="media-body">
 				<h2>许正侒</h2>
-              <h5 class="mt-0">求职意向：PythonWeb开发相关工作</h5>
+            <h5 class="mt-0">求职意向：PythonWeb开发相关工作</h5>
 			   <ul>
-              	<li>2年通讯行业工作经验，大学主修电子信息工程。</li>
-				<li>熟悉Django及FlaskWeb框架，熟悉MySQL相关知识，掌握前端编程相关知识，对Mongodb、redis等非关系型数据库知识有所了解；能够进行Linux编程。 </li>
-				<li>英语语言能力优秀，具有良好的逻辑思维能力。能够独立浏览英文网页及资料，经常浏览Reddits、Github、Stackflow等网站,同时对Twitter、Youtube等媒体平台的电子及互联网相关话题兴趣浓厚。</li>
-        <li>对微信小程序开发相关知识有所了解并兴趣浓厚。</li>
-				<li>擅长逻辑思维，具有良好的团队合作意识，兴趣广泛，爱好音乐、阅读及写作，同时爱好游戏及科技前沿知识。</li>
-               </ul>
+            <li>2年通讯行业工作经验，大学主修电子信息工程。</li>
+    				<li>熟悉Django及FlaskWeb框架，熟悉MySQL相关知识，掌握前端编程相关知识，对Mongodb、redis等非关系型数据库知识有所了解；能够进行Linux编程。 </li>
+    				<li>英语语言能力优秀，具有良好的逻辑思维能力。能够独立浏览英文网页及资料，经常浏览Reddits、Github、Stackflow等网站,同时对Twitter、Youtube等媒体平台的电子及互联网相关话题兴趣浓厚。</li>
+            <li>对微信小程序开发相关知识有所了解并兴趣浓厚。</li>
+    				<li>擅长逻辑思维，具有良好的团队合作意识，兴趣广泛，爱好音乐、阅读及写作，同时爱好游戏及科技前沿知识。</li>
+        </ul>
 			</div>
           </div>
         </div>
@@ -156,7 +157,31 @@
           <div class="col-sm-4 col-12 p-0"><img class="img-thumbnail"  src="../static/images/300X200.gif" alt=""></div>
         </div>
       </div>
+      <br>
+      <h2>项目简介</h2>
       <hr>
+      <div class="row">
+        <div class="col-md-6 col-sm-12">
+          <div class="row">
+            <div class="col-6">
+              <h4>长飞光纤光缆四川公司</h4>
+            </div>
+            <div class="col-6">
+              <h5 class="text-right"><span aria-hidden="true"></span> Aug 2016 - July 2018</h5>
+            </div>
+          </div>
+          <h5><span class="badge badge-secondary">工艺工程师</span></h5>
+          <p>于2016年8月至2018年7月任职于长飞光纤光缆四川公司技术生产部，职务为工艺工程师，主要负责：</p>
+          <ul>
+            <li>负责对光缆生产护套工序工艺质量及工艺纪律的工艺及生产管理。</li>
+            <li>负责各工序质量问题事故统计分析工作，制定针对性解决策略，并在部门核心例会对分析报表内容进行分析讲解。</li>
+            <li>参与新产品的设计开发及实验工作。</li>
+            <li>2018年参与公司组织的ISO标准培训，并任长飞光纤光缆四川公司内审员，负责监督内部质量体系的落实，并向公司进行汇报。</li>
+            <li>协助部门经理完成相关工作任务，负责部门工艺文件、工艺指导书等部门工艺及管理文件的起草撰写工作。</li>
+            <li>于2018年4月-2018年6月期间负责长飞集团内部标杆工序申报的技术申报材料的准备工作。</li>
+          </ul>
+        </div>
+    </div>
       <footer class="text-center">
         <div class="container">
           <div class="row">
